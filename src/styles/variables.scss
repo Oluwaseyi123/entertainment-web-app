@@ -1,0 +1,85 @@
+$primary: #FC4747;
+$secondary: #10141E;
+$tertiary: #5A698F;
+$white: #ffffff;
+$blue: #161D2F;
+// $inactive: #878787;
+// $background: #e4e4e4;
+// $background-grey: #f5f5f5;
+// $foreground: #ffffff;
+// $border: #f5f5f5;
+// $pending: #ffc400;
+// $confirmed: #00ca9a;
+// $negative: #ff6868;
+// $selected: #45bbc5;
+// $bounds: #d8d8d8;
+// $text-grey: #9a9a9a;
+
+// $clickwork: #00a3a4;
+// $agency: #ff6868;
+
+// media
+$mobile: 480px;
+$tablet: 680px;
+$desktop: 900px;
+
+$cw-primary-palette: (
+  50 : #e0f4f4,
+  100 : #b3e3e4,
+  200 : #80d1d2,
+  300 : #4dbfbf,
+  400 : #26b1b2,
+  500 : #00a3a4,
+  600 : #009b9c,
+  700 : #009192,
+  800 : #008889,
+  900 : #007778,
+  A100 : #a6feff,
+  A200 : #73feff,
+  A400 : #40fdff,
+  A700 : #26fdff,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+$cw-accent-palette: (50 : #f1f1f1,
+  100 : #dbdbdb,
+  200 : #c3c3c3,
+  300 : #ababab,
+  400 : #999999,
+  500 : #878787,
+  600 : #7f7f7f,
+  700 : #747474,
+  800 : #6a6a6a,
+  900 : #575757,
+  A100 : #f9cbcb,
+  A200 : #f49d9d,
+  A400 : #ff5f5f,
+  A700 : #ff4646,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  ));

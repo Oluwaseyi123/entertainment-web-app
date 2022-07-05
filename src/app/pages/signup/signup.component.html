@@ -1,0 +1,16 @@
+<div class="auth-container">
+  <img src="../../../assets/images/logo.svg" alt="">
+  <div class="inner-container">
+    <h1>Sign Up</h1>
+    <form action="">
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Repeat password">
+      <button type="submit" (click)="signup($event)" mat-flat-button color="primary" [disabled]="isLoading">
+        <mat-spinner class="spinner" *ngIf="isLoading" diameter="20" color="white"></mat-spinner>Create an account
+      </button>
+    </form>
+    <p>Already have an account? <span routerLink="/login">Login</span></p>
+
+  </div>
+</div>
