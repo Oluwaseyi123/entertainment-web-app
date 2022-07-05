@@ -1,0 +1,44 @@
+@import "../../../styles/variables.scss";
+
+.main-container{
+ padding: 50px 20px;
+ .search-container{
+  display: flex;
+  align-items: center;
+  img{
+   margin-right: 1em;
+  }
+  input{
+   width: 100%;
+   padding: 0px 10px 5px;
+   border: none;
+   background-color: transparent;
+   // border-bottom: 1px solid white;
+   outline: none;
+   font-family: $font-family;
+   color: $white;
+   font-size: 17px;
+   transition: border .1s ease;
+   &:focus{
+    border-bottom: 1px solid white;
+   }
+  }
+ }
+
+ .trending-container{
+  width: 100%;
+  overflow-y: hidden;
+  margin: 2em 0 0;
+  h1{
+   color: $white;
+   margin: 0 0 .5em;
+  }
+  .trending-carousel{
+   .slider{
+    img{
+     border-radius: 8px;
+    }
+   }
+  }
+ }
+}
