@@ -4,12 +4,12 @@
  </div>
  <nav>
   <ul>
-    <li routerLink="trending"> <img src="../../../assets/images/icon-nav-home.svg" alt=""> </li>
-    <li routerLink="movies"> <img src="../../../assets/images/icon-nav-movies.svg" alt=""> </li>
-    <li routerLink="tv-series"> <img src="../../../assets/images/icon-nav-tv-series.svg" alt=""> </li>
-    <li routerLink="bookmarked"> <img src="../../../assets/images/icon-nav-bookmark.svg" alt=""> </li>
+    <li> <img routerLink="trending" routerLinkActive="active" #rla="routerLinkActive" src="{{rla.isActive ? icons.homeFull  : icons.home }}" alt=""> </li>
+    <li> <img routerLink="movies" routerLinkActive="active" #rlam="routerLinkActive" src="{{rlam.isActive ? icons.moviesFull  : icons.movies}}" alt=""> </li>
+    <li> <img routerLink="tv-series" routerLinkActive="active" #rlat="routerLinkActive" src="{{rlat.isActive ? icons.tvSeriesFull : icons.tvSeries  }}" alt=""> </li>
+    <li> <img routerLink="bookmarked" #rlab="routerLinkActive" routerLinkActive="active" src="{{rlab.isActive ? icons.bookmarkFull : icons.bookmark}}" alt=""> </li>
   </ul>
- </nav>
+ </nav> <img src="../../../assets/images/icon-nav-bookmark.svg" alt="">
  <div class="avatar">
   <img src="../../../assets/images/image-avatar.png" alt="">
  </div>

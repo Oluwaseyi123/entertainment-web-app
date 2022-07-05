@@ -22,8 +22,16 @@ header{
         }
         img{
           width: 16px;
+         
+        }
+        &:nth-of-type(4){
+          img{
+            width: 13px;
+          }
+         
         }
       }
+     
     }
   }
   .avatar{
