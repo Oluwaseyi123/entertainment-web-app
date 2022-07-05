@@ -1,0 +1,36 @@
+@import "../../../styles/variables.scss";
+
+header{
+  background-color: $blue;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo{
+    img{
+      width: 25px;
+    }
+  }
+  nav{
+    ul{
+      display: flex;
+      list-style: none;
+      li{
+        cursor: pointer;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3){
+          margin-right: 15px;
+        }
+        img{
+          width: 16px;
+        }
+      }
+    }
+  }
+  .avatar{
+    img{
+      width: 24px;
+      border: 1px solid $white;
+      border-radius: 100%;
+    }
+  }
+}
