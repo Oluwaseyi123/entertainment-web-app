@@ -1,1 +1,28 @@
-<p>tv-series works!</p>
+<div class="main-container">
+  <div class="search-container">
+    <img src="../../../assets/images/icon-search.svg" alt="">
+    <input type="text" placeholder="Search for movies or TV series">
+  </div>
+
+  <div class="recommended-container">
+    <h1>TV Series</h1> 
+    <div class="recommended-carousel">
+      <div class="slider" *ngFor="let series of tvSeries">
+        <div class="bookmark-icon" >
+          <img *ngIf="series.isBookmarked === true" src="../../../assets/images/icon-bookmark-full.svg" alt="bookmark icon" >
+          <img *ngIf="series.isBookmarked === false" [src]="bookmark" alt="bookmark icon" >
+        </div>
+        <img [src]="series.thumbnail.regular.small" alt="">
+        <div class="movie-details">
+          <ul>
+            <li>{{series.year}}</li>
+            <li *ngIf="series.category === 'series'"><img src="../../../assets/images/icon-nav-seriess.svg" alt=""  > {{series.category}}</li>
+            <li *ngIf="series.category === 'TV Series'"><img src="../../../assets/images/icon-category-tv.svg" alt="" > {{series.category}}</li>
+            <li>{{series.rating}}</li>
+          </ul>
+          <h3>{{series.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

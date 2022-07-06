@@ -1,0 +1,148 @@
+@import "../../../styles/variables.scss";
+
+.main-container {
+  .search-container {
+    padding: 50px 20px 20px;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 1em;
+    }
+
+    input {
+      width: 100%;
+      padding: 0px 10px 5px;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      font-family: $font-family;
+      color: $white;
+      font-size: 16px;
+      transition: border .1s ease;
+
+      &:focus {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+  .recommended-container {
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+    margin: .2em 0 0;
+    position: relative;
+
+    h1 {
+      color: $white;
+      margin: 0 0 .7em;
+      font-size: 20px;
+    }
+
+    .recommended-carousel {
+      display: flex;
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 20px;
+      position: relative;
+      margin: 1.5em 0;
+      .slider {
+        position: relative;
+        margin-bottom: 30px;
+        position: relative;
+        cursor: pointer;
+
+        .bookmark-icon {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-color: $blue;
+          right: 10px;
+          top: 10px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          img {
+            margin: 0 auto;
+          }
+        }
+
+        >img {
+          width: 100%;
+          //max-width: 165px;
+          height: 140px;
+          border-radius: 8px;
+        }
+
+        .movie-details {
+          position: relative;
+          margin-top: 10px;
+          color: $white;
+
+          ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0 0 .5em;
+            width: 80%;
+            max-width: 200px;
+
+            li {
+              font-size: 12px;
+              color: $white;
+              position: relative;
+              display: flex;
+              align-items: center;
+
+              &:nth-of-type(1),
+              &:nth-of-type(2) {
+                margin-right: 30px;
+              }
+
+              &:nth-of-type(2),
+              &:nth-of-type(3) {
+                &:before {
+                  position: absolute;
+                  content: '';
+                  width: 5px;
+                  height: 5px;
+                  background-color: $white;
+                  left: -12px;
+                  border-radius: 100%;
+                }
+              }
+
+              img {
+                width: 12px;
+                margin-right: 7px;
+              }
+            }
+          }
+          h3{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      .recommended-carousel{
+        grid-template-columns: repeat(3, auto);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      .recommended-carousel{
+        grid-template-columns: repeat(4, auto);
+      }
+    }
+
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 5.5em;
+  }
+
+}

@@ -1,1 +1,50 @@
-<p>bookmarked works!</p>
+<div class="main-container">
+  <div class="search-container">
+    <img src="../../../assets/images/icon-search.svg" alt="">
+    <input type="text" placeholder="Search for movies or TV series">
+  </div>
+
+  <div class="recommended-container">
+    <h1>Bookmarked Movies</h1> 
+    <div class="recommended-carousel">
+      <div class="slider" *ngFor="let bookmark of bookmarkedMovies">
+        <div class="bookmark-icon" >
+          <img *ngIf="bookmark.isBookmarked === true" src="../../../assets/images/icon-bookmark-full.svg" alt="bookmark icon" >
+          <img *ngIf="bookmark.isBookmarked === false" [src]="bookmark" alt="bookmark icon" >
+        </div>
+        <img [src]="bookmark.thumbnail.regular.small" alt="">
+        <div class="movie-details">
+          <ul>
+            <li>{{bookmark.year}}</li>
+            <li *ngIf="bookmark.category === 'Movie'"><img src="../../../assets/images/icon-category-movie.svg" alt=""  > {{bookmark.category}}</li>
+            <li *ngIf="bookmark.category === 'TV Series'"><img src="../../../assets/images/icon-category-tv.svg" alt="" > {{bookmark.category}}</li>
+            <li>{{bookmark.rating}}</li>
+          </ul>
+          <h3>{{bookmark.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recommended-container">
+    <h1>Bookmarked TV Series</h1> 
+    <div class="recommended-carousel">
+      <div class="slider" *ngFor="let bookmark of bookmarkedSeries">
+        <div class="bookmark-icon" >
+          <img *ngIf="bookmark.isBookmarked === true" src="../../../assets/images/icon-bookmark-full.svg" alt="bookmark icon" >
+          <img *ngIf="bookmark.isBookmarked === false" [src]="bookmark" alt="bookmark icon" >
+        </div>
+        <img [src]="bookmark.thumbnail.regular.small" alt="">
+        <div class="movie-details">
+          <ul>
+            <li>{{bookmark.year}}</li>
+            <li *ngIf="bookmark.category === 'Movie'"><img src="../../../assets/images/icon-category-movie.svg" alt=""  > {{bookmark.category}}</li>
+            <li *ngIf="bookmark.category === 'TV Series'"><img src="../../../assets/images/icon-category-tv.svg" alt="" > {{bookmark.category}}</li>
+            <li>{{bookmark.rating}}</li>
+          </ul>
+          <h3>{{bookmark.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

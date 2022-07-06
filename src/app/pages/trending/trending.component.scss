@@ -54,6 +54,12 @@
         margin: 0 1em 1em 0;
         position: relative;
         cursor: pointer;
+        transition: all .5s ease;
+        &:hover{
+          >img{
+            opacity: .5;
+          }
+        }
 
         .bookmark-icon {
           position: absolute;
@@ -66,6 +72,7 @@
           display: flex;
           align-items: center;
           cursor: pointer;
+          transition: all .2s ease;
 
           img {
             margin: 0 auto;
@@ -123,6 +130,7 @@
           border-radius: 8px;
           width: 240px;
           height: 100%;
+          transition: all .2s ease;
         }
       }
     }
@@ -174,7 +182,7 @@
         >img {
           width: 100%;
           //max-width: 165px;
-          height: 130px;
+          height: 140px;
           border-radius: 8px;
         }
 
@@ -189,6 +197,7 @@
             list-style: none;
             margin: 0 0 .5em;
             width: 80%;
+            max-width: 200px;
 
             li {
               font-size: 12px;
@@ -228,5 +237,22 @@
       }
     }
 
+    @media screen and (min-width: $tablet) {
+      .recommended-carousel{
+        grid-template-columns: repeat(3, auto);
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      .recommended-carousel{
+        grid-template-columns: repeat(4, auto);
+      }
+    }
+
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 5.5em;
+  }
+
 }
