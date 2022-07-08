@@ -8,9 +8,9 @@
     <h1>Bookmarked Movies</h1> 
     <div class="recommended-carousel">
       <div class="slider" *ngFor="let bookmark of bookmarkedMovies">
-        <div class="bookmark-icon" >
+        <div class="bookmark-icon" (click)="bookmark.isBookmarked = ! bookmark.isBookmarked">
           <img *ngIf="bookmark.isBookmarked === true" src="../../../assets/images/icon-bookmark-full.svg" alt="bookmark icon" >
-          <img *ngIf="bookmark.isBookmarked === false" [src]="bookmark" alt="bookmark icon" >
+          <img *ngIf="bookmark.isBookmarked === false" src="../../../assets/images/icon-bookmark-empty.svg" alt="bookmark icon" >
         </div>
         <img [src]="bookmark.thumbnail.regular.small" alt="">
         <div class="movie-details">
